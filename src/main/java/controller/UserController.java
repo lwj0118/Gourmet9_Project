@@ -129,21 +129,24 @@ public class UserController extends HttpServlet {
 				req.getRequestDispatcher("user/editForm.jsp").forward(req, res);
 			}
 		//회원정보수정
-	     else if(cmd.equals("edit")) {    	
+	     else if(cmd.equals("edit")) {    
 	    	String pass = req.getParameter("password");
 			String email = req.getParameter("email"); 
 			String name = req.getParameter("name"); 
 			int telnum = Integer.parseInt(req.getParameter("telNum"));
 			String address = req.getParameter("address");
 			EditReqDto dto = new EditReqDto();
+			dto.setUserNum(Integer.parseInt(req.getParameter("userNum")));
 			dto.setPass(pass);
 			dto.setEmail(email); 
 			dto.setName(name); 
 			dto.setTelnum(telnum);
-			dto.setAddress(address);		  	  
+			dto.setAddress(address);	
+			System.out.println("넘어가는 dto: " + dto);
 			int result = userService.edit(dto);
+			System.out.println("결과는 : " + result);
 			if(result==1) { 
-				 Script.alertMsg("회원정보 수정완료", "/Gourmet9/index.jsp", res); 
+				 Script.alertMsg("회원정보 수정완료", "/index.jsp", res); 
 			  }
 			else {
 			  Script.back("수정실패", res); 

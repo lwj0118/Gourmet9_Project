@@ -15,7 +15,7 @@
                     <div class="col-sm-10 col-sm-offset-1 profiel-container">
 
                         <form action="user?cmd=edit" method="post" onsubmit="return vaild()">
-
+							<input type="hidden" name="userNum" value="<%=dto.getUserNum()%>">
                             <div class="profiel-header">
                                 <h3>
                                     <b>UPDATE</b> YOUR PROFILE <br>
@@ -58,7 +58,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-10 col-sm-offset-1">
-                                    <input type='submit' class='btn btn-finish btn-primary pull-right' name='update' value='Update' />
+                                    <input type='submit' class='btn btn-finish btn-primary pull-right' name='update' value='update' />
                                 </div>
                                 
                             </div>
