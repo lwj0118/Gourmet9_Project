@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import config.DBConnection;
+import domain.store.dto.StoreDto;
 import domain.user.User;
 import domain.user.dto.EditReqDto;
 import domain.user.dto.JoinReqDto;
@@ -13,32 +14,28 @@ import domain.user.dto.LoginReqDto;
 
 public class StoreDao {
 	
-	public User findByusernameAndPassword(LoginReqDto dto) {
-		User user = null;
+	public int stregi(StoreDto dto) {
+		int result = 0; 
+		
 		Connection conn = DBConnection.getConnection();
-		String query = "select * from member where id=? and pass=?";
+		String query = "insert into store(storeNum, stname, address, sttel, rate, category, info)"
+				+ " values(store_seq.nextval, ?,?,?,?,?,?)";
 		PreparedStatement psmt = null;
-		ResultSet rs = null;
 		try {
 			psmt = conn.prepareStatement(query);
-			psmt.setString(1, dto.getId());
-			psmt.setString(2, dto.getPass());
-			rs = psmt.executeQuery();
-			if(rs.next()) {
-				user = User.builder()
-						.userNum(rs.getInt("userNum"))
-						.id(rs.getString("Id"))
-						.pass(rs.getString("pass"))
-						.email(rs.getString("email"))
-						.name(rs.getString("name"))
-						.telnum(rs.getInt("telnum"))
-						.address(rs.getString("address"))
-						.build();
-			}
+			psmt.setString(1, dto.getStname());
+			psmt.setString(2, dto.getAddress());
+			psmt.setInt(3, dto.getSttel());
+			psmt.setInt(4, dto.getRate());
+			psmt.setString(5, dto.getCategory());
+			psmt.setString(6, dto.getInfo());
+			result = psmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return user;
+		return result;
+		
 	}
+	
 }

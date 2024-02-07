@@ -96,13 +96,13 @@
                             <div class="single-footer news-letter">
                                 <h4>Stay in touch</h4>
                                 <div class="footer-title-line"></div>
-                                <p>Feel free to Email us!</p>
+                                <p>Feel free to Email to us!</p>
 
-                                <form>
+                                <form action= "mailto:" method="post">
                                     <div class="input-group">
-                                        <input class="form-control" type="text" placeholder="E-mail us! ">
+                                        <input class="form-control" type="text" style="color:black" placeholder="E-mail us! ">
                                         <span class="input-group-btn">
-                                            <button class="btn btn-primary subscribe" href="mailto:" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
+                                            <button class="btn btn-primary subscribe"  type="submit"><i class="pe-7s-paper-plane pe-2x"></i></button>
                                         </span>
                                     </div>
                                     <!-- /input-group -->

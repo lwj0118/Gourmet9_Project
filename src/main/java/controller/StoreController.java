@@ -7,7 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import domain.store.dto.StoreDto;
 import service.StoreService;
+import util.Script;
 
 
 
@@ -30,8 +32,27 @@ public class StoreController extends HttpServlet {
 		StoreService storeService = new StoreService();
 		
 		if(cmd.equals("regi")) {
-			//응답페이지 지정
-			req.getRequestDispatcher("/user/loginForm.jsp").forward(req, res);
+			String stname = req.getParameter("stname");
+			String address = req.getParameter("address");
+			int sttel = Integer.parseInt(req.getParameter("sttel"));
+			int rate = Integer.parseInt(req.getParameter("rate"));
+			String category = req.getParameter("category");
+			String info = req.getParameter("info");
+			StoreDto dto = new StoreDto();
+			dto.setStname(stname);
+			dto.setAddress(address);
+			dto.setSttel(sttel);
+			dto.setRate(rate);
+			dto.setCategory(category);
+			dto.setInfo(info);
+			
+			int result = storeService.regi(dto);
+			if(result==1) {
+				Script.alertMsg("가게등록 완료", "/index.jsp", res); 
+			}
+			else {
+				Script.back("가게등록 실패", res); 
+			}
 		}
 		else if(cmd.equals("rvForm")) {
 	    	 req.getRequestDispatcher("/reservationForm.jsp").forward(req, res);
