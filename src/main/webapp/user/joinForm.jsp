@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
 
-	<div>
+	<div class="container">
 		<script>
 			let isChecking = false;
 			function valid(){

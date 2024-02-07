@@ -34,6 +34,8 @@
         <link rel="stylesheet" href="../assets/css/owl.transitions.css">
         <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="../assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/wizard.css"> 
+
     </head>
     <body>
         <div id="preloader">
@@ -88,7 +90,10 @@
 					    	<div class="button navbar-right">
 		                        <button class="navbar-btn nav-button wow bounceInRight login" type="button" onclick="location.href='user?cmd=logout'" data-wow-delay="0.4s">Logout</button>
 		                        <button class="navbar-btn nav-button wow fadeInRight" onclick="location.href='user?cmd=editForm'" data-wow-delay="0.5s">My Profile</button>
-	                  		  </div>
+	                  		<c:if test="${sessionScope.isAdmin!=null}">
+	                  		<button class="navbar-btn nav-button wow" onclick="location.href='store?cmd=rvForm'" data-wow-delay="0.5s">admin</button>
+	                  		</c:if>
+	                  		</div>
 				    	</c:when>
 				    	<c:otherwise>
                     <div class="button navbar-right">
@@ -103,8 +108,8 @@
                             <a href="index.jsp" class="active" data-delay="200">Home</a>                          
                         </li>
 
-                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a class="" href="user?cmd=rv">reservation</a></li>
-                        <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="contact.html">Contact</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="user?cmd=rv">reservation</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="user?cmd=contact">Contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
