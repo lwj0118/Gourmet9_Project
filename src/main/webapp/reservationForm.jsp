@@ -36,7 +36,7 @@
 			  </div>
   			  <div class="form-group"> Telephone	    
 					<input type="text" class="form-control" placeholder="010-1234-5678" 
-					name="telnum" id="telnum">
+					name="sttel" id="sttel">
 			  </div>
 			   <div class="form-group"> Rate		    
 					<input type="text" class="form-control" placeholder="Enter Your Rate" 
@@ -53,9 +53,7 @@
                     </select>
                 </div>
 			  <div class="form-group"> Information    
-					<textarea type="text" class="form-control" placeholder="Enter Your Information" 
-					name="info" id="info">
-					</textarea>
+					<textarea type="text" class="form-control" placeholder="Enter Your Information" name="info" id="info"></textarea>
 			  </div><br/>
 			  	<button type="submit" class="btn btn-primary pull-right">Submit</button>
 			</form>
