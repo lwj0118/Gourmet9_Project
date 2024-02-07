@@ -152,6 +152,9 @@ public class UserController extends HttpServlet {
 			  Script.back("수정실패", res); 
 			   	}
 	     }
+	     else if(cmd.equals("rv")) {
+	    	 req.getRequestDispatcher("/reservation.jsp").forward(req, res);
+	     }
 	}
 				
 

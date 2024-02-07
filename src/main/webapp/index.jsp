@@ -8,15 +8,22 @@
 
                     <div class="item"><img src="assets/img/slide1/slider-image-1.jpg" alt=""></div> 
                     <div class="item"><img src="assets/img/slide1/slider-image-2.jpg" alt=""></div> 
-                    <div class="item"><img src="assets/img/slide1/slider-image-4.jpg" alt=""></div>   
+                    <div class="item"><img src="assets/img/slide1/slider-image-3.jpg" alt=""></div>   
 
                 </div>
             </div>
             <div class="container slider-content">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
-                        <h2>Enjoy World’s fine dining experience</h2>
-                        <p>대충 있어보이는 글</p>
+                        <h2 style="color:white"><strong>Enjoy World’s fine dining experience</strong></h2>
+                        <p style="color:black"><strong>
+							요리 중에도 멈추지 않는 예약 전화, 직전 예약 확인 연락, 고객에게 취소석 연락, 노쇼 시 비용 부담.
+							<br/>
+							예약이나 고객 정보의 일상적 관리는 이렇게 훌륭한 음식을 만드는 사람들이 고민할 일이 아닙니다.<br/>
+							더욱더 장인의 본연의 일인 요리에 몰입할 수 있는 환경을 제공해드리고 싶습니다.<br/>
+							Gourmet9은 그런 마음에서 태어났습니다.<br/>
+							<br/>
+							우리는 항상 장인들의 편에 서고 싶다. 그 한 마음으로 서비스를 제공하고 있습니다.</strong></p>
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
                             <form action="" class=" form-inline">
@@ -50,49 +57,16 @@
                                     <div class="search-row">   
 
                                         <div class="form-group mar-r-20">
-                                            <label for="price-range">Price range ($):</label>
+                                            <label for="price-range">Price range (￦):</label>
                                             <input type="text" class="span2" value="" data-slider-min="0" 
                                                    data-slider-max="600" data-slider-step="5" 
                                                    data-slider-value="[0,450]" id="price-range" ><br />
                                             <b class="pull-left color">2000$</b> 
                                             <b class="pull-right color">100000$</b>
                                         </div>
-                                        <!-- End of  -->  
-
-                                        <div class="form-group mar-l-20">
-                                            <label for="property-geo">Property geo (m2) :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[50,450]" id="property-geo" ><br />
-                                            <b class="pull-left color">40m</b> 
-                                            <b class="pull-right color">12000m</b>
-                                        </div>
-                                        <!-- End of  --> 
+                                        <!-- End of  -->                                   
                                     </div>
-
-                                    <div class="search-row">
-
-                                        <div class="form-group mar-r-20">
-                                            <label for="price-range">Min baths :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[250,450]" id="min-baths" ><br />
-                                            <b class="pull-left color">1</b> 
-                                            <b class="pull-right color">120</b>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                        <div class="form-group mar-l-20">
-                                            <label for="property-geo">Min bed :</label>
-                                            <input type="text" class="span2" value="" data-slider-min="0" 
-                                                   data-slider-max="600" data-slider-step="5" 
-                                                   data-slider-value="[250,450]" id="min-bed" ><br />
-                                            <b class="pull-left color">1</b> 
-                                            <b class="pull-right color">120</b>
-                                        </div>
-                                        <!-- End of  --> 
-
-                                    </div>
+       
                                     <br>
                                     <div class="search-row">  
 
