@@ -37,7 +37,7 @@
                                         <option> Category </option>
                                         <option>korean </option>
                                         <option>Japanese</option>
-                                        <option>chiness</option>  
+                                        <option>chinese</option>  
                                     </select>
                                 </div>
                                 <div class="form-group">
