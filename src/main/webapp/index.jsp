@@ -24,8 +24,6 @@
                         <div class="search-form wow pulse" data-wow-delay="0.8s">
 
                             <form action="user?cmd=rv" class=" form-inline" method="post">
-                                
-                            
                                 <div class="form-group">                                   
                                     <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Select your city">
                                         <option>Seoul</option>
@@ -50,7 +48,7 @@
                                     <input type="text" class="form-control" placeholder="Key word">
                                 </div>
                                 <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
-	
+
                             </form>
                         </div>
                     </div>

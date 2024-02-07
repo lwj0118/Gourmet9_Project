@@ -155,6 +155,10 @@ public class UserController extends HttpServlet {
 	     else if(cmd.equals("rv")) {
 	    	 req.getRequestDispatcher("/reservation.jsp").forward(req, res);
 	     }
+	     else if(cmd.equals("contact")) {
+	    	 req.getRequestDispatcher("/contact.jsp").forward(req, res);
+	     }
+	     
 	}
 				
 

@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
 
-	<div class="col-md-6">
+
+	<div class="container">
                     <div class="box-for overflow">                         
                         <div class="col-md-12 col-xs-12 login-blocks">
                             <h2>LOGIN </h2> 
@@ -33,6 +34,7 @@
                         
                     </div>
                 </div>
+              
 
 
 <%@ include file="../include/footer.jsp" %>
