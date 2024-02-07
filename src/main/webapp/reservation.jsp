@@ -40,9 +40,9 @@
 
                                                 <select id="basic" class="selectpicker show-tick form-control">
                                                     <option> -Status- </option>
-                                                    <option>Rent </option>
-                                                    <option>Boy</option>
-                                                    <option>used</option>  
+                                                    <option> Available </option>
+                                                    <option> table size</option>
+                                                    <option> people</option>  
 
                                                 </select>
                                             </div>
@@ -93,84 +93,7 @@
                                         </div>
                                     </fieldset>
 
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Fire Place</label>
-                                                </div> 
-                                            </div>
-
-                                            <div class="col-xs-6">
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox"> Dual Sinks</label>
-                                                </div>
-                                            </div>                                            
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> Swimming Pool</label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox" checked> 2 Stories </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label><input type="checkbox"> Laundry Room </label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label> <input type="checkbox"> Emergency Exit</label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox" checked> Jog Path </label>
-                                                </div>
-                                            </div>  
-                                            <div class="col-xs-6"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox"> 26' Ceilings </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset class="padding-5">
-                                        <div class="row">
-                                            <div class="col-xs-12"> 
-                                                <div class="checkbox">
-                                                    <label>  <input type="checkbox"> Hurricane Shutters </label>
-                                                </div>
-                                            </div>  
-                                        </div>
-                                    </fieldset>
-
-                                    <fieldset >
-                                        <div class="row">
-                                            <div class="col-xs-12">  
-                                                <input class="button btn largesearch-btn" value="Search" type="submit">
-                                            </div>  
-                                        </div>
-                                    </fieldset>                                     
+                                                             
                                 </form>
                             </div>
                         </div>
