@@ -78,11 +78,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/wjcuisin.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> 우준반점 </a></h5>
+                                            <h5><a href="user?cmd=rv"> 우준반점 </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 350m </span>
                                             <span class="proerty-price pull-right"> ￦ 70,000</span>
@@ -99,11 +99,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-2.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> LIBRE </a></h5>
+                                            <h5><a href="user?cmd=rv"> LIBRE </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 10000km </span>
                                             <span class="proerty-price pull-right"> $ 200,000</span>
@@ -120,11 +120,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-1.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-1.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> CHUANTONG CHINESE RESTAURANT  </a></h5>
+                                            <h5><a href="user?cmd=rv"> CHUANTONG CHINESE RESTAURANT  </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 700km </span>
                                             <span class="proerty-price pull-right"> ￥1000 </span>
@@ -141,11 +141,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-3.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Wolfgang's Steak House </a></h5>
+                                            <h5><a href="user?cmd=rv"> Wolfgang's Steak House </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 11000km </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
@@ -164,11 +164,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-1.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-1.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html">  </a></h5>
+                                            <h5><a href="user?cmd=rv">  </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
@@ -187,11 +187,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-2.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="user?cmd=rv"> Super nice villa </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
@@ -210,11 +210,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-3.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="user?cmd=rv"> Super nice villa </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>
@@ -231,11 +231,11 @@
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-two proerty-item">
                                         <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                            <a href="user?cmd=rv" ><img src="assets/img/demo/property-2.jpg"></a>
                                         </div>
 
                                         <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <h5><a href="user?cmd=rv"> Super nice villa </a></h5>
                                             <div class="dot-hr"></div>
                                             <span class="pull-left"><b> Area :</b> 120m </span>
                                             <span class="proerty-price pull-right"> $ 300,000</span>

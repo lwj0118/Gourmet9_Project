@@ -20,7 +20,7 @@
                                 <ul class="footer-adress">
                                     <li><i class="pe-7s-map-marker strong"> </i> in your heart</li>
                                     <li><i class="pe-7s-mail strong"> </i> gourmet9@gourmet9.com</li>
-                                    <li><i class="pe-7s-call strong"> </i> +82 10 1234 5678</li>
+                                    <li><i class="pe-7s-call strong"> </i> +82 234 567 7890</li>
                                 </ul>
                             </div>
                         </div>
@@ -29,11 +29,10 @@
                                 <h4>Quick links </h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
-                                    <li><a href="properties.html">Reservation</a>  </li> 
-                                    <li><a href="#">Services</a>  </li> 
-                            <!--   <li><a href="submit-property.html">Reservation </a></li>  -->
-                                    <li><a href="contact.html">Contact us</a></li> 
-                                    <li><a href="faq.html">FAQ</a> </li> 
+                                	<li><a href="index.jsp">Home</a>  </li> 
+                                    <li><a href="user?cmd=rv">Reservation</a>  </li>                                   
+                                    <li><a href="user?cmd=contact">Contact us</a></li> 
+                               
                                     
                                 </ul>
                             </div>
@@ -96,7 +95,7 @@
                             <div class="single-footer news-letter">
                                 <h4>Stay in touch</h4>
                                 <div class="footer-title-line"></div>
-                                <p>Feel free to Email to us!</p>
+                                <p>Feel free to Email us!</p>
 
                                 <form action= "mailto:" method="post">
                                     <div class="input-group">
@@ -131,10 +130,9 @@
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Home</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Reservation</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.4s">FAQ</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contact</a></li>
+                                <li><a class="wow fadeInUp animated" href="index.jsp" data-wow-delay="0.2s">Home</a></li>
+                                <li><a class="wow fadeInUp animated" href="user?cmd=rv" data-wow-delay="0.3s">Reservation</a></li>                            
+                                <li><a class="wow fadeInUp animated" href="user?cmd=contact" data-wow-delay="0.6s">Contact</a></li>
                             </ul> 
                         </div>
                     </div>
