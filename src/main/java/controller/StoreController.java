@@ -1,11 +1,16 @@
 package controller;
 
 import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
 
 import domain.store.dto.StoreDto;
 import service.StoreService;
@@ -32,12 +37,20 @@ public class StoreController extends HttpServlet {
 		StoreService storeService = new StoreService();
 		
 		if(cmd.equals("regi")) {
-			String stname = req.getParameter("stname");
-			String address = req.getParameter("address");
-			int sttel = Integer.parseInt(req.getParameter("sttel"));
-			int rate = Integer.parseInt(req.getParameter("rate"));
-			String category = req.getParameter("category");
-			String info = req.getParameter("info");
+			ServletContext application = req.getServletContext(); 
+			String saveDirectory = application.getRealPath("/upload"); 
+			int maxPostSize = 1024 * 1000;
+			System.out.println(maxPostSize);
+			MultipartRequest mr = new MultipartRequest(req, saveDirectory, maxPostSize, "utf-8");  
+			String stname = mr.getParameter("stname");
+			String address = mr.getParameter("address");
+			int sttel = Integer.parseInt(mr.getParameter("sttel"));
+			int rate = Integer.parseInt(mr.getParameter("rate"));
+			String category = mr.getParameter("category");
+			String info = mr.getParameter("info");
+			String image = mr.getFilesystemName("image");
+			System.out.println("이미지는 어디로 : "+image);
+			
 			StoreDto dto = new StoreDto();
 			dto.setStname(stname);
 			dto.setAddress(address);
@@ -45,6 +58,7 @@ public class StoreController extends HttpServlet {
 			dto.setRate(rate);
 			dto.setCategory(category);
 			dto.setInfo(info);
+			dto.setImage(image);
 			
 			int result = storeService.regi(dto);
 			if(result==1) {
@@ -57,6 +71,38 @@ public class StoreController extends HttpServlet {
 		else if(cmd.equals("rvForm")) {
 	    	 req.getRequestDispatcher("/reservationForm.jsp").forward(req, res);
 	     }
+		else if(cmd.equals("rv")) {
+			
+			int page = Integer.parseInt(req.getParameter("page"));
+			List<StoreDto> stores = storeService.stlist(page);
+	
+			int total = storeService.sttotal();
+			
+			int lastpage = (total-1)/9;
+			
+			req.setAttribute("stores", stores);
+			req.setAttribute("page", page);
+			req.setAttribute("lastpage", lastpage);
+			
+			req.getRequestDispatcher("/reservation.jsp").forward(req, res);
+		}
+		else if(cmd.equals("delete")) {
+			int num = Integer.parseInt(req.getParameter("storeNum"));
+			int result = storeService.delete(num);
+			if(result==1) {
+				res.sendRedirect("index.jsp");
+			}else {
+				Script.back("삭제실패", res); 
+			}
+		}
+		else if(cmd.equals("detail")) {
+			int num =  Integer.parseInt(req.getParameter("storeNum"));
+			StoreDto dto = storeService.info(num);
+			req.setAttribute("dto", dto);
+			req.getRequestDispatcher("detail.jsp").forward(req, res); 
+			
+		}
+		
     }
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
