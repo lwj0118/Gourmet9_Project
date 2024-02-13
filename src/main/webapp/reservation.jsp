@@ -113,7 +113,7 @@
                         <div id="list-type" class="proerty-th">
                         	<c:forEach var="s" items="${stores}">
                             	<div class="col-sm-6 col-md-4 p0">
-                            	
+
                                     <div class="box-two proerty-item">
                                     	
                                         <div class="item-thumb">
