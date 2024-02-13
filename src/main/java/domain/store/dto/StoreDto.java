@@ -19,5 +19,6 @@ public class StoreDto {
 	private int rate;
 	private String category;
 	private String info;
+	private String image;
 	private Date regidate;
 }

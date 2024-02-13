@@ -30,7 +30,7 @@
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
                                 	<li><a href="index.jsp">Home</a>  </li> 
-                                    <li><a href="user?cmd=rv">Reservation</a>  </li>                                   
+                                    <li><a href="store?cmd=rv&page=0">Reservation</a>  </li>                                   
                                     <li><a href="user?cmd=contact">Contact us</a></li> 
                                
                                     
@@ -131,7 +131,7 @@
                         <div class="bottom-menu pull-right"> 
                             <ul> 
                                 <li><a class="wow fadeInUp animated" href="index.jsp" data-wow-delay="0.2s">Home</a></li>
-                                <li><a class="wow fadeInUp animated" href="user?cmd=rv" data-wow-delay="0.3s">Reservation</a></li>                            
+                                <li><a class="wow fadeInUp animated" href="store?cmd=rv&page=0" data-wow-delay="0.3s">Reservation</a></li>                            
                                 <li><a class="wow fadeInUp animated" href="user?cmd=contact" data-wow-delay="0.6s">Contact</a></li>
                             </ul> 
                         </div>
