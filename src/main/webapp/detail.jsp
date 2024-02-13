@@ -6,23 +6,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	
 <%
-	String storeNum = request.getParameter("storeNum");
-	StoreDao dao = new StoreDao();
-	StoreDto dto = dao.findbynum(Integer.parseInt(num)); 
+	
+	StoreDto dto = (StoreDto) request.getAttribute("dto");
 	
 %>
 
 <div class="container">
 	
-	<c:if test="${sessionScope.isAdmin!=null}">
-	<form style="display:inline-block" action="<%=request.getContextPath()%>/store?cmd=delete" method="post">
-	<input type="hidden" name="num" value="<%=dto.getStoreNum()%>" />
-	<button type="submit" class="btn btn-danger">삭제</button>
-	</form>
-	<button class="btn btn-primary">수정</button>
-	</c:if>
-	<br />
-	<br />
+	
 	
 	<h3>가게목록 상세보기</h3>
 	<br />
@@ -46,11 +37,22 @@
 	</div>
 	<div class="form-group">
 		<div class="m-2"><%=dto.getImage() %></div>
-	</div>
+	</div> 
 
 	<hr />
+	<div class="button navbar-right">
+		<c:if test="${sessionScope.isAdmin!=null}">
+		<form style="display:inline-block" action="<%=request.getContextPath()%>/store?cmd=delete" method="post">
+			<input type="hidden" name="stnum" value="<%=dto.getStoreNum()%>" />
+			<button type="submit" class="btn btn-danger">삭제</button>
+		</form>
+		<form style="display:inline-block" action="<%=request.getContextPath()%>/store?cmd=editForm" method="post">
+			<input type="hidden" name="stnum" value="<%=dto.getStoreNum()%>" />
+		<button class="btn btn-primary">수정</button>
+		</form>
+		</c:if>
 	
-	
+	</div>
 </div>
 
 

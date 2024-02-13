@@ -9,10 +9,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 
 import domain.store.dto.StoreDto;
+import domain.user.User;
 import service.StoreService;
 import util.Script;
 
@@ -62,7 +64,7 @@ public class StoreController extends HttpServlet {
 			
 			int result = storeService.regi(dto);
 			if(result==1) {
-				Script.alertMsg("가게등록 완료", "/index.jsp", res); 
+				Script.alertMsg("가게등록 완료", "store?cmd=rv&page=0", res); 
 			}
 			else {
 				Script.back("가게등록 실패", res); 
@@ -87,21 +89,63 @@ public class StoreController extends HttpServlet {
 			req.getRequestDispatcher("/reservation.jsp").forward(req, res);
 		}
 		else if(cmd.equals("delete")) {
-			int num = Integer.parseInt(req.getParameter("storeNum"));
+			int num = Integer.parseInt(req.getParameter("stnum"));
 			int result = storeService.delete(num);
 			if(result==1) {
-				res.sendRedirect("index.jsp");
+				Script.alertMsg("삭제되었습니다.", "index.jsp", res); 
+				
+				 
 			}else {
 				Script.back("삭제실패", res); 
 			}
 		}
 		else if(cmd.equals("detail")) {
-			int num =  Integer.parseInt(req.getParameter("storeNum"));
-			StoreDto dto = storeService.info(num);
+			int num =  Integer.parseInt(req.getParameter("stnum"));
+			StoreDto dto = storeService.info(num); 
 			req.setAttribute("dto", dto);
-			req.getRequestDispatcher("detail.jsp").forward(req, res); 
-			
+			req.getRequestDispatcher("detail.jsp").forward(req, res);
+	
 		}
+		 else if(cmd.equals("editForm")) { 
+			 int num = Integer.parseInt(req.getParameter("stnum"));
+			 StoreDto stCheck = storeService.info(num); 
+			 req.setAttribute("dto", stCheck);
+			 req.getRequestDispatcher("stEditForm.jsp").forward(req, res); 
+			 
+		 }
+		 else if(cmd.equals("edit")) {
+			 ServletContext application = req.getServletContext(); 
+				String saveDirectory = application.getRealPath("/upload"); 
+				int maxPostSize = 1024 * 1000;
+				MultipartRequest mr = new MultipartRequest(req, saveDirectory, maxPostSize, "utf-8");  
+				int stnum = Integer.parseInt(mr.getParameter("stnum")); 
+				String stname = mr.getParameter("stname");
+				String address = mr.getParameter("address");
+				int sttel = Integer.parseInt(mr.getParameter("sttel"));
+				int rate = Integer.parseInt(mr.getParameter("rate"));
+				String category = mr.getParameter("category");
+				String info = mr.getParameter("info");
+				String image = mr.getFilesystemName("image");
+				
+				
+				StoreDto dto = new StoreDto();
+				dto.setStoreNum(stnum);
+				dto.setStname(stname);
+				dto.setAddress(address);
+				dto.setSttel(sttel);
+				dto.setRate(rate);
+				dto.setCategory(category);
+				dto.setInfo(info);
+				dto.setImage(image);
+				System.out.println("넘어가는 dto :" + dto);
+				int result = storeService.edit(dto);
+				if(result==1) {
+					Script.alertMsg("가게등록수정 완료", "store?cmd=rv&page=0", res); 
+				}
+				else {
+					Script.back("가게등록 실패", res); 
+				}
+		 }
 		
     }
     
