@@ -19,7 +19,7 @@
                     <div class="wizard-container">                     
                                 
             
-			<form action="store?cmd=regi" method="post" onsubmit="return vaild()">
+			<form action="store?cmd=regi" method="post" onsubmit="return vaild()" enctype="multipart/form-data">
 			<div class="wizard-header">
                     <h2>
                         <b>Register</b> <br>
@@ -53,8 +53,12 @@
                     </select>
                 </div>
 			  <div class="form-group"> Information    
-					<textarea type="text" class="form-control" placeholder="Enter Your Information" name="info" id="info"></textarea>
-			  </div><br/>
+					<textarea class="form-control" placeholder="Enter Your Information" name="info" id="info"></textarea>
+			  </div>
+			  <div class="form-group"> Image		    
+					<input type="file" class="form-control" name="image" id="image">
+			  </div>
+			  <br/>
 			  	<button type="submit" class="btn btn-primary pull-right">Submit</button>
 			</form>
                      

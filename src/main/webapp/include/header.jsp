@@ -107,7 +107,7 @@
                             <a href="index.jsp" class="active" data-delay="200">Home</a>                          
                         </li>
 
-                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="user?cmd=rv">reservation</a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.1s"><a href="store?cmd=rv&page=0">reservation</a></li>
                         <li class="wow fadeInDown" data-wow-delay="0.4s"><a href="user?cmd=contact">Contact</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
