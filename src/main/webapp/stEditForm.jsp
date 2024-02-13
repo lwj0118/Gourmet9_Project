@@ -1,0 +1,76 @@
+<%@page import="domain.store.dto.StoreDto"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="include/header.jsp" %>
+<%
+	StoreDto stdto = new StoreDto();
+	StoreDto dto = (StoreDto) request.getAttribute("dto"); 
+%>
+
+        <div class="page-head"> 
+            <div class="container">
+                <div class="row">
+                    <div class="page-head-content">
+                        <h1 class="page-title">Edit restaurant</h1>               
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End page header -->
+        <!-- property area -->
+        <div class="content-area submit-property" style="background-color: #FCFCFC;">&nbsp;
+            <div class="container">
+                <div class="clearfix" > 
+                    <div class="wizard-container">                     
+                                
+            
+			<form action="store?cmd=edit" method="post" onsubmit="return vaild()" enctype="multipart/form-data">
+			<input type="hidden" name="stnum" value="<%=dto.getStoreNum() %>"> 
+			<div class="wizard-header">
+                    <h2>
+                        <b>Edit</b> <br>
+                        Restaurant information <br>
+                    </h2><br/>
+            </div>
+			  <div class="form-group"> Restaurant name	    
+					<input type="text" class="form-control" placeholder="Enter Your Restaurant name" 
+					name="stname" id="stname" value="<%=dto.getStname() %>" required>
+			  </div>
+  			   <div class="form-group"> Address		    
+					<input type="text" class="form-control" placeholder="Enter Your Address" 
+					name="address" id="address" value="<%=dto.getAddress() %>">
+			  </div>
+  			  <div class="form-group"> Telephone	    
+					<input type="text" class="form-control" placeholder="010-1234-5678" 
+					name="sttel" id="sttel" value="<%=dto.getSttel() %>">
+			  </div>
+			   <div class="form-group"> Rate		    
+					<input type="text" class="form-control" placeholder="Enter Your Rate" 
+					name="rate" id="rate" value="<%=dto.getRate() %>">
+			  </div>
+			  <div class="form-group">
+                    <label>Category :</label>
+                    <select name="category" id="category" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="category">
+                        <option>Korean</option>
+                        <option>Japanese</option>
+                        <option>Chinese</option>
+                        <option>Italian</option>
+                        <option>French</option>
+                    </select>
+                </div>
+			  <div class="form-group"> Information    
+					<textarea class="form-control" placeholder="<%=dto.getInfo() %>" name="info" id="info" ></textarea>
+			  </div>
+			  <div class="form-group"> Image		    
+					<input type="file" class="form-control" name="image" id="image" value="<%=dto.getImage() %>">
+			  </div>
+			  <br/>
+			  	<button type="submit" class="btn btn-primary pull-right">Submit</button>
+			</form>
+                     
+                    </div> 
+                </div>
+            </div>
+        </div>
+     
+<%@ include file="include/footer.jsp" %>

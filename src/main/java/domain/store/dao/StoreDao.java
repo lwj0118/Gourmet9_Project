@@ -10,11 +10,9 @@ import java.util.Date;
 import java.util.List;
 
 import config.DBConnection;
+
 import domain.store.dto.StoreDto;
-import domain.user.User;
-import domain.user.dto.EditReqDto;
-import domain.user.dto.JoinReqDto;
-import domain.user.dto.LoginReqDto;
+
 
 public class StoreDao {
 	
@@ -143,5 +141,34 @@ public class StoreDao {
 		}
 		return result;
 	}
+	
+	//가게수정
+	public int update(StoreDto dto) {				
+		int result =0;
+		Connection conn = DBConnection.getConnection();
+		String query = "update store set"
+				+ " stname=?, address=?, sttel=?, rate=?, category=?, info=?, image=?"
+				+ " where storeNum=?";
+		PreparedStatement psmt = null;
+		
+		
+		try {
+			psmt = conn.prepareStatement(query);
+			psmt.setString(1, dto.getStname());
+			psmt.setString(2, dto.getAddress());
+			psmt.setInt(3, dto.getSttel());
+			psmt.setInt(4, dto.getRate());
+			psmt.setString(5, dto.getCategory());
+			psmt.setString(6, dto.getInfo());
+			psmt.setString(7, dto.getImage());
+			psmt.setInt(8, dto.getStoreNum());
+			result = psmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
 }
 
